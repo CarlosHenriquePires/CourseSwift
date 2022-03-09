@@ -1,15 +1,10 @@
 import UIKit
 
+class Pilha{
 var pilha: [Int] = []
 
-    
-    func inserir(value:Int){
-        if(pilha.count == 0){
-            pilha.append(value)
-        }else{
-            pilha.insert(value, at:0 )
-        }
-        
+    func inserir(value:Int)-> Void{
+        pilha.insert(value, at: 0)
     }
 
     func remover()->Void{
@@ -19,24 +14,35 @@ var pilha: [Int] = []
     func limpar()->Void{
         pilha.removeAll()
     }
+    
+    func toString()->Void{
+        print(pilha)
+    }
 
+}
+var pilhaObj: Pilha = Pilha()
 
+pilhaObj.inserir(value: 1)
+pilhaObj.inserir(value: 5)
+pilhaObj.inserir(value: 7)
+pilhaObj.inserir(value: 3)
+pilhaObj.inserir(value: 6)
+pilhaObj.inserir(value: 0)
 
-inserir(value: 1)
-inserir(value: 5)
-inserir(value: 7)
-inserir(value: 3)
-inserir(value: 6)
-inserir(value: 0)
+print(pilhaObj.pilha)
 
-print(pilha)
+pilhaObj.remover()
 
-remover()
-remover()
+pilhaObj.remover()
 
-print(pilha)
+pilhaObj.toString()
 
-limpar()
+pilhaObj.remover()
 
-print(pilha)
+pilhaObj.remover()
 
+pilhaObj.toString()
+
+pilhaObj.limpar()
+
+pilhaObj.toString()
