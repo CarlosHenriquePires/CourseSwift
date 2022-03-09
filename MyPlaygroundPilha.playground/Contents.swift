@@ -7,15 +7,17 @@ var pilha: [Int] = []
         pilha.insert(value, at: 0)
     }
 
-    func remover()->Void{
+    func remover()-> Void{
         pilha.remove(at: 0)
     }
     
-    func limpar()->Void{
-        pilha.removeAll()
+    func limpar()-> Void{
+        if(pilha.count > 0){
+            pilha.removeAll()
+        }
     }
     
-    func toString()->Void{
+    func toString()-> Void{
         print(pilha)
     }
 
@@ -42,6 +44,10 @@ pilhaObj.remover()
 pilhaObj.remover()
 
 pilhaObj.toString()
+
+pilhaObj.remover()
+
+pilhaObj.remover()
 
 pilhaObj.limpar()
 
