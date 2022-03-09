@@ -29,7 +29,7 @@ pilhaObj.inserir(value: 3)
 pilhaObj.inserir(value: 6)
 pilhaObj.inserir(value: 0)
 
-print(pilhaObj.pilha)
+pilhaObj.toString()
 
 pilhaObj.remover()
 
@@ -44,5 +44,14 @@ pilhaObj.remover()
 pilhaObj.toString()
 
 pilhaObj.limpar()
+
+pilhaObj.toString()
+
+pilhaObj.inserir(value: 11)
+pilhaObj.inserir(value: 55)
+pilhaObj.inserir(value: 27)
+pilhaObj.inserir(value: 13)
+pilhaObj.inserir(value: 86)
+pilhaObj.inserir(value: 90)
 
 pilhaObj.toString()
