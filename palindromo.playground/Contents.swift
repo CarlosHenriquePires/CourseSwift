@@ -28,4 +28,5 @@ func verifyPalindromo(words:String){
     }
 }
 
-verifyPalindromo(words: "A base do teto desaba")
+verifyPalindromo(words: "A cara rajada da jararaca")
+
