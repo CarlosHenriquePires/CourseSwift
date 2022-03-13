@@ -1,4 +1,5 @@
 import UIKit
+import Darwin
 
 // Funcao deve retornar uma imagem de qlqr forma
 func icon() -> UIImage{
@@ -11,14 +12,19 @@ func icon() -> UIImage{
 
 // Guard let obriga um valor existir para dar continuidade
 // Devido a necessidade do do valor que esta sendo requerido
-
 func showName(parameter: String?){
     guard let parameter = parameter else {
+        print("sem valor")
         return
     }
     print(parameter)
 
 }
-showName(parameter: "Carlos")
+showName(parameter:"x" )
+
+
+
+
+
 
 
