@@ -7,16 +7,20 @@
 
 import Foundation
 
+// MARK: - enum Errors
 enum ConsumingAPIErrors: Error{
     case urlInvalid
     case noProcessData
     case noDataAvailable
 }
 
+// MARK: - protocol Service
 protocol ServiceProtocol {
     func getUsers(completion: @escaping(Result<[Users], ConsumingAPIErrors>)-> Void)
 }
 
+
+// MARK: - class Service Protocol
 class APIService: ServiceProtocol {
     let session = URLSession.shared
     let url = "https://run.mocky.io/v3/bc5ba143-4885-4541-8c12-d67a54978e75"
@@ -27,6 +31,7 @@ class APIService: ServiceProtocol {
         return instance
     }()
     
+    //MARK: - get Users from API
     func getUsers(completion: @escaping (Result<[Users], ConsumingAPIErrors>) -> Void) {
         guard let url = URL(string: url) else { return completion(.failure(.urlInvalid))}
         

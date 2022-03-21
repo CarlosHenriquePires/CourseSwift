@@ -28,10 +28,12 @@ class ViewController: UIViewController {
         
     }
     
+    // MARK: -  Privates Functions
     private func register(){
         let nib = UINib(nibName: CustomTableViewCell.indentify, bundle: nil)
         tableview.register(nib, forCellReuseIdentifier: CustomTableViewCell.indentify)
     }
+    
     private func delegates(){
         tableview.delegate = self
         tableview.dataSource = self
@@ -49,6 +51,7 @@ class ViewController: UIViewController {
     }
 }
 
+// MARK: -  Extensions
 extension ViewController:UITableViewDelegate{
     
 }

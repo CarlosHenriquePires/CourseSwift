@@ -20,7 +20,7 @@ class CustomTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    
+    // MARK: - Setup data in components
     func setup(user:Users){
         logoImage.loadImage(from: user.photo)
         nameLabel.text = user.name

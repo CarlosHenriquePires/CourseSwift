@@ -7,7 +7,7 @@
 
 import Foundation
 
-// MARK: - Welcome
+// MARK: - Users
 struct Users: Codable {
     let id: Int
     let name: String
