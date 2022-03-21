@@ -17,7 +17,7 @@
 		5EF55ABC27E92AEC00FB9247 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF55ABB27E92AEC00FB9247 /* APIService.swift */; };
 		5EF55AC027E9300500FB9247 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF55ABE27E9300500FB9247 /* CustomTableViewCell.swift */; };
 		5EF55AC127E9300500FB9247 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EF55ABF27E9300500FB9247 /* CustomTableViewCell.xib */; };
-		5EF55AC427E939BC00FB9247 /* UIImageView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF55AC327E939BC00FB9247 /* UIImageView+extensions.swift */; };
+		5EF55AC627E93D4C00FB9247 /* UIImageView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF55AC527E93D4800FB9247 /* UIImageView+extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +33,7 @@
 		5EF55ABB27E92AEC00FB9247 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		5EF55ABE27E9300500FB9247 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		5EF55ABF27E9300500FB9247 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
-		5EF55AC327E939BC00FB9247 /* UIImageView+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView+extensions.swift"; path = "../../../../../../../Downloads/UIImageView+extensions.swift"; sourceTree = "<group>"; };
+		5EF55AC527E93D4800FB9247 /* UIImageView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +66,7 @@
 		5EF55AA227E9291000FB9247 /* Activity */ = {
 			isa = PBXGroup;
 			children = (
-				5EF55AC227E9398D00FB9247 /* Extensions */,
+				5EF55AC727E93DB000FB9247 /* Extensions */,
 				5EF55ABD27E92FC100FB9247 /* Custom Components */,
 				5EF55ABA27E92AB300FB9247 /* Services */,
 				5EF55AB727E92A6D00FB9247 /* Models */,
@@ -106,10 +106,10 @@
 			path = "Custom Components";
 			sourceTree = "<group>";
 		};
-		5EF55AC227E9398D00FB9247 /* Extensions */ = {
+		5EF55AC727E93DB000FB9247 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				5EF55AC327E939BC00FB9247 /* UIImageView+extensions.swift */,
+				5EF55AC527E93D4800FB9247 /* UIImageView+extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -186,12 +186,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EF55AC427E939BC00FB9247 /* UIImageView+extensions.swift in Sources */,
 				5EF55AC027E9300500FB9247 /* CustomTableViewCell.swift in Sources */,
 				5EF55AB927E92A9200FB9247 /* Users.swift in Sources */,
 				5EF55ABC27E92AEC00FB9247 /* APIService.swift in Sources */,
 				5EF55AA827E9291000FB9247 /* ViewController.swift in Sources */,
 				5EF55AA427E9291000FB9247 /* AppDelegate.swift in Sources */,
+				5EF55AC627E93D4C00FB9247 /* UIImageView+extensions.swift in Sources */,
 				5EF55AA627E9291000FB9247 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
