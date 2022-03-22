@@ -25,7 +25,6 @@ class ViewController: UIViewController {
         delegates()
         register()
         getUsers()
-        
     }
     
     // MARK: -  Privates Functions

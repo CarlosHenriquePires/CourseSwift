@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import UIKit
+import Alamofire
 
 // MARK: - enum Errors
 enum ConsumingAPIErrors: Error{
@@ -33,25 +35,35 @@ class APIService: ServiceProtocol {
     
     //MARK: - get Users from API
     func getUsers(completion: @escaping (Result<[Users], ConsumingAPIErrors>) -> Void) {
+        
         guard let url = URL(string: url) else { return completion(.failure(.urlInvalid))}
-        
-        let dataTask = session.dataTask(with: url) { data, _ , _ in
-        
-            do {
-                
-                guard let jsonData = data else { return completion(.failure(.noDataAvailable))}
-
-                let decoder = JSONDecoder()
-                
-                let usersResponse = try decoder.decode([Users].self, from: jsonData)
-                
-                completion(.success(usersResponse))
-            }catch {
-                completion(.failure(.noProcessData))
+        AF.request(url, method: .get).validate().responseDecodable(of:[Users].self) { response in
+            guard let users = response.value else {
+                return
             }
-        
+            completion(.success(users))
         }
-        dataTask.resume()
+        
+        
+//        guard let url = URL(string: url) else { return completion(.failure(.urlInvalid))}
+//
+//        let dataTask = session.dataTask(with: url) { data, _ , _ in
+//
+//            do {
+//
+//                guard let jsonData = data else { return completion(.failure(.noDataAvailable))}
+//
+//                let decoder = JSONDecoder()
+//
+//                let usersResponse = try decoder.decode([Users].self, from: jsonData)
+//
+//                completion(.success(usersResponse))
+//            }catch {
+//                completion(.failure(.noProcessData))
+//            }
+//
+//        }
+//        dataTask.resume()
   
     }
     
