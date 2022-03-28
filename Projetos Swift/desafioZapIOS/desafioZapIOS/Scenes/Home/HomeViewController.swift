@@ -15,6 +15,14 @@ class HomeViewController: UIViewController {
         return table
     }()
     
+    lazy var persons = [Person](){
+        didSet {
+            DispatchQueue.main.async {
+                self.tableview.reloadData()
+            }
+        }
+    }
+    
     
 
     override func viewDidLoad() {
@@ -36,6 +44,8 @@ class HomeViewController: UIViewController {
         ])
         
         tableview.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.identifier)
+        
+        getPersons()
     }
     
     
@@ -67,20 +77,34 @@ class HomeViewController: UIViewController {
     private func callOptions(){
         let secondViewController = SecondViewController()
         navigationController?.present(secondViewController, animated: true, completion: {
-            print("Abrindo tela de apresentacao")
+
         })
+    }
+    
+    func getPersons(){
+        APIService.shared.getPersons { res in
+            switch(res){
+                case .success(let res):
+                    self.persons = res
+                case .failure(let error):
+                    print(error)
+            }
+        }
     }
 }
 
 
 extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("cliquei")
+    }
     
 
 }
 
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return persons.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -88,8 +112,11 @@ extension HomeViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier, for: indexPath) as? CustomTableViewCell else { return UITableViewCell()
 
         }
+        cell.accessoryType = .disclosureIndicator
         
-                
+        let dataPerson = persons[indexPath.row]
+        cell.setup(person: dataPerson)
+        
         return cell
     }
     

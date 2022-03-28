@@ -1,0 +1,6 @@
+module Pods_desafioZapIOS {
+  umbrella header "Pods-desafioZapIOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

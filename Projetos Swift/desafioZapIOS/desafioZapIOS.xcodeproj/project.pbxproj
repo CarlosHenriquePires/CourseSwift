@@ -15,9 +15,13 @@
 		5EF55C1A27EE900000FB9247 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF55C1927EE900000FB9247 /* SecondViewController.swift */; };
 		5EF55C1E27EE916E00FB9247 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF55C1D27EE916E00FB9247 /* ThirdViewController.swift */; };
 		5EF55C2127EE9D2500FB9247 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF55C2027EE9D2500FB9247 /* CustomTableViewCell.swift */; };
+		5EF55C2C27F1E90800FB9247 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF55C2B27F1E90800FB9247 /* APIService.swift */; };
+		5EF55C2F27F1EA2700FB9247 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF55C2E27F1EA2700FB9247 /* Person.swift */; };
+		C4D857954CDA911C7FA1F0C3 /* libPods-desafioZapIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F7C55229EF80094A653AD2D /* libPods-desafioZapIOS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4896364ABBAEFCA1FF21D2DF /* Pods-desafioZapIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafioZapIOS.release.xcconfig"; path = "Target Support Files/Pods-desafioZapIOS/Pods-desafioZapIOS.release.xcconfig"; sourceTree = "<group>"; };
 		5EF55BFF27EE7E2700FB9247 /* desafioZapIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = desafioZapIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF55C0227EE7E2700FB9247 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EF55C0427EE7E2700FB9247 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +32,10 @@
 		5EF55C1927EE900000FB9247 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		5EF55C1D27EE916E00FB9247 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		5EF55C2027EE9D2500FB9247 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		5EF55C2B27F1E90800FB9247 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		5EF55C2E27F1EA2700FB9247 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		7F7C55229EF80094A653AD2D /* libPods-desafioZapIOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-desafioZapIOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		941BBAE32E9152784542264E /* Pods-desafioZapIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafioZapIOS.debug.xcconfig"; path = "Target Support Files/Pods-desafioZapIOS/Pods-desafioZapIOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4D857954CDA911C7FA1F0C3 /* libPods-desafioZapIOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +55,8 @@
 			children = (
 				5EF55C0127EE7E2700FB9247 /* desafioZapIOS */,
 				5EF55C0027EE7E2700FB9247 /* Products */,
+				8D050678D2B4221DAE1E7F90 /* Pods */,
+				E004E0EEF1C7F946EE48C226 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +71,8 @@
 		5EF55C0127EE7E2700FB9247 /* desafioZapIOS */ = {
 			isa = PBXGroup;
 			children = (
+				5EF55C2D27F1EA1700FB9247 /* Models */,
+				5EF55C2827F1E6E600FB9247 /* Services */,
 				5EF55C1F27EE9D0900FB9247 /* CustomTableViewCell */,
 				5EF55C1627EE8F4D00FB9247 /* Scenes */,
 				5EF55C0227EE7E2700FB9247 /* AppDelegate.swift */,
@@ -113,6 +126,39 @@
 			path = CustomTableViewCell;
 			sourceTree = "<group>";
 		};
+		5EF55C2827F1E6E600FB9247 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5EF55C2B27F1E90800FB9247 /* APIService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		5EF55C2D27F1EA1700FB9247 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5EF55C2E27F1EA2700FB9247 /* Person.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8D050678D2B4221DAE1E7F90 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				941BBAE32E9152784542264E /* Pods-desafioZapIOS.debug.xcconfig */,
+				4896364ABBAEFCA1FF21D2DF /* Pods-desafioZapIOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E004E0EEF1C7F946EE48C226 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F7C55229EF80094A653AD2D /* libPods-desafioZapIOS.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -120,6 +166,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5EF55C1327EE7E2900FB9247 /* Build configuration list for PBXNativeTarget "desafioZapIOS" */;
 			buildPhases = (
+				B020063F9EC682DABFF05674 /* [CP] Check Pods Manifest.lock */,
 				5EF55BFB27EE7E2700FB9247 /* Sources */,
 				5EF55BFC27EE7E2700FB9247 /* Frameworks */,
 				5EF55BFD27EE7E2700FB9247 /* Resources */,
@@ -178,16 +225,43 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B020063F9EC682DABFF05674 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-desafioZapIOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5EF55BFB27EE7E2700FB9247 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5EF55C2127EE9D2500FB9247 /* CustomTableViewCell.swift in Sources */,
+				5EF55C2C27F1E90800FB9247 /* APIService.swift in Sources */,
 				5EF55C1A27EE900000FB9247 /* SecondViewController.swift in Sources */,
 				5EF55C0727EE7E2700FB9247 /* HomeViewController.swift in Sources */,
 				5EF55C1E27EE916E00FB9247 /* ThirdViewController.swift in Sources */,
 				5EF55C0327EE7E2700FB9247 /* AppDelegate.swift in Sources */,
+				5EF55C2F27F1EA2700FB9247 /* Person.swift in Sources */,
 				5EF55C0527EE7E2700FB9247 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +398,7 @@
 		};
 		5EF55C1427EE7E2900FB9247 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 941BBAE32E9152784542264E /* Pods-desafioZapIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -352,6 +427,7 @@
 		};
 		5EF55C1527EE7E2900FB9247 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4896364ABBAEFCA1FF21D2DF /* Pods-desafioZapIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
